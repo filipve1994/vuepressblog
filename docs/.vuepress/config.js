@@ -1,11 +1,12 @@
 const currentDateUTC = new Date().toUTCString()
 
 module.exports = {
-	title: 'My New VuePress Blog',
+	title: 'FVE BLOG VUEPRESS',
+	description: "Developer in Belgium",
 	theme: '@vuepress/theme-default',
 	dest: './public',
 	themeConfig: {
-		repo: 'https://wwww.github.com',
+		repo: 'https://github.com/filipve1994/vuepressblog',
 		repoLabel: 'Repo',
 		editLinks: true,
 		editLinkText: 'Found a bug? Help me improve this page!',
@@ -35,14 +36,13 @@ module.exports = {
 			'vuepress-plugin-rss',
 			{
 				base_url: '/',
-				site_url: 'https://vuepressblog.org',
+				site_url: 'https://vuepressblogfilip.netlify.com/',
 				filter: frontmatter => frontmatter.date <= new Date(currentDateUTC),
 				count: 20
 			}
 		],
 		'vuepress-plugin-reading-time',
 		'vuepress-plugin-janitor',
-		'vuepress-plugin-nprogress',
 		'vuepress-plugin-smooth-scroll',
 		'vuepress-plugin-table-of-contents',
 		[
